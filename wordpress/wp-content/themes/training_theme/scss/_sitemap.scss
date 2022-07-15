@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  サイトマップ
+// ---------------------------------------------
+
+#sitemap {
+    padding-top: 30px;
+    a{
+        color:inherit;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        padding: 10px;
+        border-bottom: solid 1px #0a568e;
+    }
+
+    ul:first-child{
+        li.sitemap_toppage{
+            a{
+                background: url("../img/sitemap/img_01.png") no-repeat 10px 4px, linear-gradient(135deg, #0a568e 95%, #ffd900 95%);
+                background-size:50px auto,auto;
+                color:#fff;
+                border-bottom: 0;
+                padding-left: 70px!important;
+            }
+        }
+        >li{
+            > a{
+                background: url("../img/sitemap/icon_arrow.png") no-repeat 10px center;
+                background-size:10px auto;
+                padding-left: 25px;
+            }
+
+            li{
+                margin-left: 10px;
+                a{
+                    &:before{
+                        content:"・";
+                        color:$color-blue;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+

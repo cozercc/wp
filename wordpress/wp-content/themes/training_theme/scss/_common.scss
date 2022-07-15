@@ -1,0 +1,24 @@
+@charset "UTF-8"; 
+
+// ---------------------------------------------
+//  common_importフォルダを読み込む
+// ---------------------------------------------
+
+// float .ColR系
+@import "common_import/float";
+
+// text-align .txtR系 と vertical-align
+@import "common_import/align";
+
+// margin .mb00系
+@import "common_import/margin";
+
+// font-size .txt00系
+@import "common_import/font-size";
+
+// clearfix .cf
+@import "common_import/clearfix";
+
+
+
+

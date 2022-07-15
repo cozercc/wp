@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  各ファイルを読み込む
+// ---------------------------------------------
+
+@import "variables";
+
+@import "reset";  // リセットCSS
+@import "common"; // 基本共通要素
+@import "parts";  // 共通装飾パーツ
+@import "base";   // header,footerやmainなど
+
+@import "top";
+@import "about";
+@import "info";
+@import "reserve";
+@import "after";
+@import "voice";
+@import "contact";
+@import "sitemap";
+
+@import "post";

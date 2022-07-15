@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  contact tooltip
+// ---------------------------------------------
+
+.frm.danger{
+    display: block;
+    background: #c90000;
+    padding: 5px 10px;
+    position: relative;
+    margin-top: 12px;
+    clear: both;
+    color: #fff!important;
+    font-size: 80%;
+
+    &:before{
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        top: -20px;
+        border: 10px solid #c90000;
+        border-color: transparent;
+        border-bottom-color: #c90000;
+    }
+}

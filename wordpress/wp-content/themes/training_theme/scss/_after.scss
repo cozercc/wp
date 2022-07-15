@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  連携プロジェクト
+// ---------------------------------------------
+
+.btn_morelink {
+    text-align:center;
+    margin-top: 30px;
+    img{
+        max-width:250px;
+    }
+}
+
+#after_point,#after_intern,#after_radio,#after_shubai{
+    .ttl{
+        color:#0a568e;
+        font-weight: bold;
+
+        @extend .ttl_inverse;
+        span{
+            padding:2px;
+            margin-top: 6px;
+        }
+        img{
+            height:16px;
+            margin:0;
+            vertical-align: middle;
+        }
+    }
+
+    .txtC{
+        margin-bottom: 10px;
+    }
+
+    @include min-mq() {
+        .ttl{
+            span{
+                padding:5px;
+            }
+            img{
+                height:auto;
+            }
+        }
+    }
+}
+
+#after_point{
+    padding-top: 30px;
+    text-align:center;
+
+    p{
+        margin-bottom: 30px;
+    }
+
+    h2{
+        border-bottom: solid 2px $color-red;
+        padding-bottom: 5px;
+
+        img{
+            height:27px;
+        }
+    }
+
+    ul{
+        border-bottom: solid 2px $color-red;
+        padding:20px 0 15px;
+        li{
+            margin-bottom: 5px;
+        }
+        img{
+            width:250px;
+        }
+    }
+
+    @include min-mq() {
+        h2{
+
+            img{
+                height:auto;
+            }
+        }
+        ul{
+
+            img{
+                width:auto;
+            }
+        }
+
+    }
+}

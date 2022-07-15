@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  参加方法
+// ---------------------------------------------
+
+.btn_lineat {
+  text-align: center;
+  padding: 30px 0 20px;
+  img {
+    max-width: 250px;
+  }
+}
+
+#reserve_howto {
+  h2 {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .reserve_contact {
+    margin: 30px auto;
+    border: solid 1px #5d5d5d;
+    border-top: 0;
+    padding: 0 10px 20px;
+
+    h3 {
+      background: #5d5d5d;
+      text-align: center;
+      color: #fff;
+      margin: 0 -10px 10px;
+      font-size: percentage(15/12);
+      font-weight: bold;
+      padding: 2px;
+    }
+  }
+  .reserve_contact {
+    .telphone{
+      font-weight: bold;
+      font-size: percentage(13/12);
+      border-bottom: solid 1px #5d5d5d;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      img{
+          height:20px;
+          width:20px;
+          margin-right:5px;
+          vertical-align: middle;
+      }
+    }
+    .reserve_alta{
+      font-weight: bold;
+      font-size: percentage(13/12);
+      a{
+          color:inherit;
+          text-decoration: none;
+      }
+    }
+    .btn_mail{
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+
+}
+
+
+#reserve_access{
+    .module_map{
+        padding:0;
+    }
+}
+
+#reserve_faq {
+  font-size: percentage(11/12);
+  .question_wrap {
+    border: solid 1px #0a568e;
+    border-left: solid 3px #0a568e;
+    margin-bottom: 10px;
+  }
+  .question {
+    padding: 6px 50px 6px 10px;
+    background: url("../img/common/icon_plus.png") no-repeat 95% center;
+    background-size:15px ;
+    cursor: pointer;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    
+    &.open {
+      background: url("../img/common/icon_minus.png") no-repeat 95% center;
+      background-size:15px ;
+    }
+  }
+  .answer {
+    padding: 10px 10px;
+    background: #ededed;
+    font-weight: bold;
+    color: $color-blue;
+  }
+    @include min-mq() {
+        .question {
+            background-position: 98% center!important;
+        }
+    }
+}

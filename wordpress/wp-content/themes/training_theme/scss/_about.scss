@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  アルタスクールとは
+// ---------------------------------------------
+
+#about_about {
+    padding:50px 0 10px;
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        img {
+            max-width: 90%;
+            margin-left: -5%;
+        }
+    }
+    .lead {
+        text-align: center;
+        margin-bottom: 20px;
+        mark {
+            font-weight: bold;
+        }
+        .mark_green {
+            background: linear-gradient(transparent 85%, #b3d682 85%);
+        }
+        .mark_blue {
+            background: linear-gradient(transparent 85%, #71d4da 85%);
+        }
+    }
+
+    h3{
+        font-size: percentage(15/12);
+        font-weight: bold;
+        width:95%;
+        margin:auto;
+        margin-bottom: 10px;
+        line-height: 1;
+
+
+        &:first-of-type{
+            img{
+                width: 35px;
+                margin-right: 5px;
+                margin-left: -5px;
+            }
+        }
+        img{
+            width:25px;
+            margin-right:5px;
+        }
+    }
+
+    .fukidashi_left,.fukidashi_right{
+        padding: 15px;
+        border-radius: 5px;
+        position:relative;
+        width:90%;
+        width:calc(100% -20px);
+        margin:auto;
+
+        &:before{
+            content:"";
+            position: absolute;
+            top:50%;
+            margin-top:-5px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+    }
+
+    .fukidashi_left{
+        background: #dae8c6;
+        margin-bottom: 15px;
+
+        &:before{
+            left:-10px;
+            border-width:5px 10px 5px 0;
+            border-color: transparent #dae8c6 transparent transparent;
+        }
+    }
+    .fukidashi_right{
+        background: #c6dde8;
+        margin-bottom: 1px;
+        &:before{
+            right:-10px;
+            border-width: 5px 0 5px 10px;
+            border-color: transparent transparent transparent #c6dde8;
+
+        }
+    }
+
+    .img_bucchake{
+        margin-bottom: -13%;
+    }
+
+    @include min-mq() {
+        .img_bucchake{
+            margin-bottom: -100px;
+        }
+
+    }
+}
+
+#about_altaschool{
+    background:$color-blue url("../img/common/cover_blue.png") no-repeat top center;
+    background-size: contain;
+    padding-top: 20%;
+    color: #fff;
+
+    h2{
+        font-weight: bold;
+        font-size: percentage(20/12);
+        text-align: center;
+        margin:10px 0 5px;
+
+        img{
+            height:90px;
+            margin-bottom: 20px;
+        }
+    }
+    .lead{
+        text-align: center;
+        font-weight: bold;
+        font-size: percentage(15/12);
+        margin-bottom: 20px;
+        line-height:1.4;
+    }
+
+    strong{
+        color:#ffd900;
+    }
+
+    ul.panel_check{
+        li{
+            color: #181818;
+            padding: 10px 5px 10px 36px;
+            background: #fff url("../img/common/icon_check.png") no-repeat 8px center;
+            background-size: 20px 16px;
+            margin-bottom: 3px;
+        }
+    }
+    @include min-mq() {
+        background-size: auto;
+        padding-top:110px;
+    }
+}
+
+#course_info{
+    .btn_list{
+        margin-top: 30px;
+    }
+}
+
+#about_after{
+    background:$color-blue url("../img/common/cover_blue.png") no-repeat top center;
+    background-size: contain;
+    padding-top: 16%;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    
+    h2{
+        img{
+           height:35px; 
+           margin-bottom: 10px;
+        }
+    }
+    .lead{
+        font-size: percentage(14/12);
+        margin: 20px auto;
+    }
+    strong{
+        color:#ffd900;
+    }
+    .btn_detail{
+        margin-top: 40px;
+    }
+    @include min-mq() {
+        background-size: auto;
+        padding-top:110px;
+    }
+}

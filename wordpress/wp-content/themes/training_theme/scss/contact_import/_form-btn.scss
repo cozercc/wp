@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  contact btn
+// ---------------------------------------------
+
+.form_button{
+    overflow: hidden;
+    margin: 10px auto 30px;
+    text-align: center;
+
+    input[type=submit], input[type=button],button[type=submit]{
+        color: #fff;
+        height: 56px;
+        width: 250px;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px;
+        display: inline-block;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.3s;
+        background-size:contain!important;
+
+        
+        &:hover{
+            opacity: 0.8;
+        }
+
+        @include max-mq() {
+            max-width:80%;
+        }
+
+        //MW WP form向け
+        &[name=submitConfirm]{
+            background: url(../img/contact/btn_submit.png) no-repeat 0 0;
+        }
+
+        &[name=btn_submit]{
+            background: url(../img/contact/btn_submit.png) no-repeat 0 0;
+        }
+
+        &[name=submitBack]{
+            background: url(../img/contact/btn_back.png) no-repeat 0 0;
+        }
+
+    }
+}

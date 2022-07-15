@@ -1,0 +1,326 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  汎用パーツ
+// ---------------------------------------------
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.bg_blue {
+    background: $color-blue;
+}
+
+.bg_gray {
+    background: #ededed;
+}
+
+//見出し
+h2.ttl {
+    line-height: 1;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 25px;
+    img {
+        margin-bottom: 5px;
+        height: 16px;
+    }
+    span {
+        display: block;
+        background: #ffffff;
+        color: $color-blue;
+        font-weight: bold;
+        font-size: percentage(15/12);
+        padding: 2px;
+    }
+    @include min-mq() {
+        max-width: 640px;
+        margin-right: auto;
+        margin-left: auto;
+        img {
+            height: auto;
+            margin-bottom: 10px;
+        }
+        span{
+            padding:5px 2px;
+        }
+    }
+
+    &.ttl_inverse {
+        span {
+            background: $color-blue;
+            color: #fff;
+        }
+    }
+}
+
+//ボタン
+.btn_detail {
+    text-align: center;
+    img {
+        width: 250px;
+    }
+    @include min-mq() {
+        img {
+            width: 500px;
+        }
+    }
+}
+
+.btn_list {
+    text-align: center;
+    img {
+        width: 160px;
+    }
+}
+
+.btn_apply_wrap {
+    background: $color-red url("../img/common/bg_stripe.png") repeat 0 0;
+    background-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+    border-top: solid 5px #fff;
+    border-bottom: solid 5px #fff;
+
+    img {
+        width: 250px;
+    }
+    @include min-mq() {
+        img {
+            width: 500px;
+        }
+    }
+}
+
+//table表
+table {
+    width: 100%;
+    tr {
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border: solid 1px #c2d9e9;
+        box-sizing: border-box;
+    }
+    th {
+        background: #e7f3fb;
+        color: #345372;
+        font-weight: bold;
+    }
+    td {
+        background: #fff;
+    }
+
+    @include max-mq() {
+        &:not(.nocollapse) {
+            display: block;
+            tbody, tr, th, td {
+                width: 100% !important;
+                display: block;
+            }
+            th {
+                padding: 5px 2px 3px;
+                &:before {
+                    margin-right: 1px;
+                }
+            }
+            td {
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+#mv {
+    background: url("../img/common/bg_mv.jpg");
+    background-size: cover;
+    padding: 10px 0;
+    text-align: center;
+
+    #eyecatch {
+        height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        @include max-mq() {
+            img {
+                zoom: .5;
+                -moz-transform-origin: left top;
+                -moz-transform: scale(0.5, 0.5);
+            }
+        }
+    }
+
+    h1 {
+        background: #fff;
+        color: $color-blue;
+        font-size: percentage(15/12);
+        font-weight: bold;
+    }
+}
+
+@include max-mq() {
+    .cover_white {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            background: url("../img/common/cover_white.png") no-repeat bottom center;
+            background-size: cover;
+            display: block;
+            padding-top: 17%;
+            bottom: 0;
+            width: 100%;
+            height: 0;
+        }
+    }
+}
+
+// ---------------------------------------------
+//  お知らせ
+// ---------------------------------------------
+
+.info_list {
+    max-width: 600px;
+    margin: auto;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .post {
+        background: #eee;
+        border-radius: 5px;
+        border-bottom: solid 3px #b5b5b5;
+        margin-bottom: 10px;
+        font-weight: bold;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .category {
+            color: $color-blue;
+            border: solid 1px $color-blue;
+            margin-right: 5px;
+            display: inline-block;
+            min-width: 6em;
+            text-align: center;
+            padding: 1px 5px;
+        }
+
+        .date {
+            color: $color-blue;
+        }
+
+        h3 {
+            border-left: solid 5px $color-blue;
+            padding: 5px 0 5px 5px;
+            font-size: percentage(15/12);
+            margin: 10px 0 0;
+        }
+
+        .txt {
+            width: 55%;
+            width: calc(100% - 100px);
+        }
+        .img {
+            width: 87px;
+            height: 87px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: solid 2px $color-blue;
+            img {
+                position: absolute;
+                top: 0%;
+                left: 50%;
+                margin-left: -70%;
+                max-width: 140%;
+            }
+        }
+    }
+}
+
+//ページネーション／ページャ
+.pagination:empty {
+    display: none;
+}
+
+.pagination {
+    padding: 30px 10px 10px;
+    text-align: center;
+
+    .page-numbers {
+        display: inline-block !important;
+        border: solid 1px $color-blue;
+        font-size: percentage(15/16);
+        font-weight: bold;
+        color: $color-blue;
+        background: #fff;
+        width: 2em;
+        padding: 6px 0;
+        line-height: 1;
+        text-align: center;
+        letter-spacing: -1px;
+
+        &.current {
+            background: $color-blue;
+            color: #fff;
+        }
+
+
+        &.prev{
+            background: url(../img/common/arrow_prev.png) no-repeat center center;
+            background-size: 8px 12px;
+            color:transparent;
+        }
+        &.next{
+            background: url(../img/common/arrow_next.png) no-repeat center center;
+            background-size: 8px 12px;
+            color:transparent;
+        }
+    }
+}
+
+// ---------------------------------------------
+//  マップ
+// ---------------------------------------------
+
+.module_map {
+    padding: 40px 0;
+    margin:auto;
+    h2 {
+        text-align: center;
+        color: $color-blue;
+        font-weight: bold;
+        font-size: percentage(15/12);
+        margin-bottom: 15px;
+        span {
+            font-size: percentage(20/15);
+        }
+        em {
+            color: $color-red;
+        }
+    }
+    p:not([class]){
+        max-width: 600px;
+        margin: 20px auto 0;
+    }
+
+    .btn_map{
+        text-align:center;
+        img{
+            max-width:250px;
+        }
+    }
+
+    p + p {
+        margin-top: 20px;
+    }
+}
+

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+$color-blue:#0a568e;
+$color-red:#c11920;
+
+// breakpoint
+$max-breakpoints: (
+        /*'sm': 640px,*/
+        'tb': 767px,
+        /*'pc': 960px*/
+);
+$min-breakpoints: (
+        /*'tb': 641px,*/
+        'pc': 768px
+);
+
+
+// responsive
+@mixin max-mq($breakpoint: tb) {//767px以下
+  @media (max-width: #{map-get($max-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@mixin min-mq($breakpoint: pc) {//768px以上
+  @media (min-width: #{map-get($min-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@include min-mq() {//767px以下
+  .hidden-pc {
+    display: none;
+  }
+}
+@include max-mq() {//768px以上
+  .hidden-sp {
+    display: none;
+  }
+}

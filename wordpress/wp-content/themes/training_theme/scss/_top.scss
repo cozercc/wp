@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  トップ専用
+// ---------------------------------------------
+
+#top_mv {
+  background: url("../img/top/mv.jpg") no-repeat top center;
+  background-size: cover;
+  text-align: center;
+  height: calc(100vh - 50px);
+  box-sizing: border-box;
+  padding-top: 20vh;
+  img {
+    width: 80%;
+    max-width: 551px;
+  }
+
+  @include min-mq() {
+  background: url("../img/top/mv_pc.jpg") no-repeat top center;
+    background-size: cover;
+    padding: 10% 0;
+    height: auto;
+    position: relative;
+    margin-bottom: 100px;
+    
+    
+    &:after{
+        content: "";
+        background:url(../img/common/cover_white_pc.png);
+        width:640px;
+        height:105px;
+        display: block;
+        position: absolute;
+        bottom:-105px;
+        left:50%;
+        margin-left:-320px;
+    }
+  }
+}
+
+#top_lead {
+  font-weight: bold;
+  text-align: center;
+  padding: 30px 0 45px;
+  .lead_thinking {
+    color: $color-blue;
+    margin-bottom: 15px;
+  }
+}
+
+#top_about {
+  text-align: center;
+  h2.ttl {
+    margin-bottom: 10px;
+  }
+  p {
+    font-weight: bold;
+    color: #d9f4ff;
+  }
+  figure {
+    margin-bottom: 30px;
+  }
+  .btn_detail {
+    padding: 40px 0 0;
+  }
+}
+
+#top_voice {
+  padding-bottom: 40px;
+  .top_voice_wrap {
+    .voice_btn + .voice_btn {
+      margin-top: 10px;
+    }
+  }
+
+  @include min-mq() {
+    .top_voice_wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .voice_btn {
+        margin: 0 0 10px !important;
+        width: 49%;
+      }
+    }
+  }
+}
+
+#top_info {
+  padding-bottom: 40px;
+
+  .post{
+    background: #ffffd5;
+    border-bottom: 0;
+    margin-bottom: 5px;
+  }
+
+  .info_list {
+    .btn_list {
+      margin-top: 20px;
+    }
+  }
+}
+
+#top_nav {
+  padding: 50px 0;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  li {
+    margin-bottom: 10px;
+    width: 48.5%;
+  }
+  a {
+    background: #fff;
+    border-radius: 5px;
+    display: block;
+    padding:10px 20px 15px;
+    text-align: center;
+  }
+
+  @include min-mq() {
+    li{
+      width: 24%;
+    }
+  }
+}

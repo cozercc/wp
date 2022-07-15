@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  私達について
+// ---------------------------------------------
+
+#info_aims {
+    h2 {
+        img{
+            height:72px;
+            margin-bottom: 15px;
+        }
+    }
+    p{
+        padding: 5px;
+    }
+
+    p + p {
+        margin-top: 10px;
+    }
+    @include min-mq() {
+
+    }
+}
+
+#info_learn {
+    background:$color-blue url("../img/common/cover_blue.png") no-repeat top center;
+    background-size: contain;
+    padding-top: 12%;
+    color:#fff;
+
+    table{
+        max-width: 600px;
+        margin: auto;
+    }
+    table, tr, td {
+        background: transparent;
+        text-align: center;
+        border: 0;
+    }
+    td {
+        border: dashed 1px #fff;
+        font-size: percentage(15/12);
+        font-weight: bold;
+        padding: 15px 0;
+        color:#d9f4ff;
+    }
+    td:first-child{
+        border-left: 0;
+    }
+    td:last-child{
+        border-right: 0;
+    }
+    tr:first-child{
+        td{
+            border-top: 0;
+        }
+    }
+    tr:last-child{
+        td{
+            border-bottom: 0;
+        }
+    }
+    @include min-mq() {
+        background-size: auto;
+        padding-top:110px;
+    }
+}
+
+
+#info_instructors {
+    .person_panel{
+        max-width:600px;
+        margin:auto;
+        margin-bottom: 20px;
+        figure{
+            width: 130px;
+            margin: 30px auto 20px;
+            background: #fff;
+            text-align: center;
+            color: $color-blue;
+            font-weight: bold;
+            font-size: percentage(15/12);
+        }
+        @include min-mq() {
+            overflow: hidden;
+            figure{
+                float:left;
+                margin:0 10px 0 0;
+            }
+        }
+    }
+    .btn_company{
+        text-align: center;
+        img{
+            width: 250px;
+        }
+    }
+}
