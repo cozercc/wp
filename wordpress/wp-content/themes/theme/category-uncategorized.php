@@ -1,46 +1,32 @@
 <?php get_header(); ?>
   <div class="eyecatch">
-    <h1>お知らせ</h1>
+    <h1>チョウムライ練習用-test分類ページ</h1>
   </div>
 
   <?php get_template_part('include/common', 'breadcrumb'); ?> 
 
-  <div class="has_sidebar news_page">
-    <main>
-      <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
-        <section class="card">
-          <div class="card-body">
-          <h2><a class="card-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <div class="post_excerpt--img">
-            <?php if(has_post_thumbnail()): // サムネイルを持っているとき ?>
-              <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail(); ?>
-              </a>
-              <?php elseif(catch_that_image() == './wp-content/themes/theme/img/top/default.jpg') : ?>
-            <?php else: // サムネイルを持っていない ?>
-              <img src=<?php echo catch_that_image(); ?> class="card-img-bottom">
-              <?php endif; ?>
-          </div>
-          <div class="post_excerpt--txt">
-            <div class="post_meta">
-              <p class="post_meta--date"><?php the_time('Y.m.d'); ?></p>
-              <ul class="post_meta--cat_list">
-                <?php categories_label() ?>
-              </ul>
-              <p class="post_meta--tag">
-                <?php echo get_the_tag_list('#', ' #', ''); ?>
-              </p>
-            </div>
-            <p class="card-text"> <?php the_excerpt(); ?> </p>
-          </div>
-          </div>
-        </section>
-      <?php endwhile; ?><?php endif; ?>
-      <div class="pagination"><?php wp_pagination();//ページネーション ?></div>
-    </main>
-    <?php get_sidebar(); ?>
-  </div>
-  <div>
-  <p>I am working on uncategorized page!!!</p>
+<!-- posts by cards -->
+<section>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  <?php if (have_posts() ) : ?>
+    <?php while ( have_posts() ) : the_post(); ?>
+    <div class="col">
+    <div class="card h-100 w-50 mx-auto">
+        <img src="<?php echo catch_that_image(); ?>" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+        <p class="card-text">
+          <?php the_date(); ?> by
+          <a href="<?php the_author_link(); ?>"><?php the_author(); ?></a>
+        </p>
+        <p><?php the_excerpt(); ?></p>
+      </div>
+      <a href="<?php the_permalink(); ?>" class="btn btn-primary">Go to the page</a>
+    </div>
+    </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </div>
+</section>
+  <p>I am working on list of the test分類 page !!!</p>
 <?php get_footer(); ?>

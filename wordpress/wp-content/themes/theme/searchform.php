@@ -1,6 +1,15 @@
-<!-- search -->
-<form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
-	<input class="search-input" type="search" name="s" placeholder="検索キーワードを入力してください?>">
-	<button class="search-submit" type="submit" role="button">検索</button>
-</form>
-<!-- /search -->
+<?php get_header()?> 
+<?php 
+get_header(); ?> 
+
+<div class="wrap"> 
+	<div id="primary" class="content-area"> 
+		<main id="main" class="site-main" role="main"> 
+
+			<?php get_search_form( ); ?> 
+
+		</main><!-- #main --> 
+	</div><!-- #primary --> 
+</div><!-- .wrap --> 
+
+<?php get_footer(); ?>

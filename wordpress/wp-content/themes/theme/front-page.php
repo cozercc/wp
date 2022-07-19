@@ -54,19 +54,5 @@
     <?php endif; ?>
 </div>
 </section>
-
-<!-- items by bootstraps -->
-<!-- <section class="top_about">
-  <div class="card-group">
-  <div class="card">
-    <img src="https://picsum.photos/seed/picsum/300/200" class="card-img-top" alt="card-group-image">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">株式会社アルタ　プログラマー課　チョウムライWordPress研修練習用.</p>
-    </div>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</section> -->
 </main>
 <?php get_footer(); ?>

@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+<ul>
+  <?php wp_list_pages(); ?>
+</ul>
 <div class="eyecatch">
   <?php if(has_post_thumbnail()): // サムネイルを持っているとき ?><?php the_post_thumbnail(); ?><?php else: // サムネイルを持っていない ?><?php endif; ?>
   <h1><?php the_title(); ?></h1>
