@@ -51,7 +51,7 @@ if(function_exists('add_theme_support')) {
     $first_img = $matches [1] [0];
   
     if(empty($first_img)){ //Defines a default image
-      $first_img = "/img/top/img1.jpg";
+      $first_img = "./wp-content/themes/theme/img/top/default.jpg";
     }
     return $first_img;
   }

@@ -16,7 +16,7 @@
               <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail(); ?>
               </a>
-              <?php elseif(catch_that_image() == '/images/default.jpg') : ?>
+              <?php elseif(catch_that_image() == './wp-content/themes/theme/img/top/default.jpg') : ?>
             <?php else: // サムネイルを持っていない ?>
               <img src=<?php echo catch_that_image(); ?> class="card-img-bottom">
               <?php endif; ?>

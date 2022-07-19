@@ -31,10 +31,10 @@
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/sample-page">Features</a>
+                <a class="nav-link" href="/sample-page">固定ページ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="/category/uncategorized" tabindex="-1" aria-disabled="true">カテゴリー</a>
               </li>
             </ul>
             <form class="d-flex">
