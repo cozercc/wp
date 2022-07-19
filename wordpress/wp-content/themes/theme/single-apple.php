@@ -13,7 +13,7 @@
       <?php the_field('category'); ?>
     </li>
     <li>
-      <?php the_field('price'); ?>
+      <?php echo get_field('price').'$'; ?>
     </li>
     <li>
       <?php the_field('color'); ?>

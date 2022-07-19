@@ -21,7 +21,7 @@
         </p>
         <p><?php the_excerpt(); ?></p>
       </div>
-      <a href="<?php the_permalink(); ?>" class="btn btn-primary">Go somewhere</a>
+      <a href="<?php the_permalink(); ?>" class="btn btn-primary">Go to the page</a>
     </div>
     </div>
     <?php endwhile; ?>
