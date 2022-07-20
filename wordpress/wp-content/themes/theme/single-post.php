@@ -10,6 +10,6 @@
     ?>
     </div>
   <div>
-  <p>I am working on single page of post</p>
+  <p class="text-center">I am working on single page of post</p>
   </div>
 <?php get_footer(); ?>

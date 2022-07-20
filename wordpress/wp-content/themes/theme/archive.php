@@ -41,6 +41,6 @@
     <?php get_sidebar(); ?>
   </div>
   <div>
-  <p>I am working on post page!!!</p>
+  <p class="text-center">I am working on post page!!!</p>
 </div>
 <?php get_footer(); ?>

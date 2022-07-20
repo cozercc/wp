@@ -9,7 +9,7 @@ if (have_posts()) :
 endif;
 ?>
 <div>
-  <p>I am working on index page!!!</p>
+  <p class="text-center">I am working on index page!!!</p>
 </div>
 <?php wp_pagination();//ページネーション ?>
 <?php get_footer(); ?>

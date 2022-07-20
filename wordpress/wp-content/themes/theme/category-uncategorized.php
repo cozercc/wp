@@ -3,8 +3,6 @@
     <h1>チョウムライ練習用-test分類ページ</h1>
   </div>
 
-  <?php get_template_part('include/common', 'breadcrumb'); ?> 
-
 <!-- posts by cards -->
 <section>
   <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -17,7 +15,7 @@
         <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
         <p class="card-text">
           <?php the_date(); ?> by
-          <a href="<?php the_author_link(); ?>"><?php the_author(); ?></a>
+          <a><?php the_author_link(); ?></a>
         </p>
         <p><?php the_excerpt(); ?></p>
       </div>
@@ -28,5 +26,5 @@
     <?php endif; ?>
 </div>
 </section>
-  <p>I am working on list of the test分類 page !!!</p>
+  <p class="text-center">I am working on list of the test分類 page !!!</p>
 <?php get_footer(); ?>

@@ -24,6 +24,6 @@
   </ul>
     </div>
   <div>
-  <p>I am working on single page of apple</p>
+  <p class="text-center">I am working on single page of apple</p>
   </div>
 <?php get_footer(); ?>

@@ -46,6 +46,6 @@
   <?php get_sidebar(); ?>
 </div>
 <div>
-  <p>I am working on single page of ALL!!!</p>
+  <p class="text-center">I am working on single page of ALL!!!</p>
 </div>
 <?php get_footer(); ?>

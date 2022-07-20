@@ -1,10 +1,13 @@
-<?php get_header(); ?>
+<?php get_header(); ?>.
   <div class="eyecatch">
     <h1>チョウムライ練習用-アップル製品ページ</h1>
   </div>
-
-  <?php get_template_part('include/common', 'breadcrumb'); ?> 
-
+  <ul class="list-group list-group-horizontal">
+   <li class="list-group-item"><a href="<?php echo esc_url(add_query_arg( array('meta_key' => 'price', 'orderby' => 'meta_value_num', 'order' => 'DESC'), '#') ); ?>">価格高い順</a></li>
+   <li class="list-group-item"><a href="<?php echo esc_url(add_query_arg( array('meta_key' => 'price', 'orderby' => 'meta_value_num', 'order' => 'ASC'), '#') ); ?>">価格安い順</a></li>
+   <li class="list-group-item"><a href="<?php echo esc_url(add_query_arg( array('meta_key' => 'storage', 'orderby' => 'meta_value_num', 'order' => 'DESC'), '#') ); ?>">ストレージ多い順</a></li>
+   <li class="list-group-item"><a href="<?php echo esc_url(add_query_arg( array('meta_key' => 'storage', 'orderby' => 'meta_value_num', 'order' => 'ASC'), '#') ); ?>">ストレージ少ない順</a></li>
+</ul>
 <!-- posts by cards -->
 <section>
   <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -17,7 +20,7 @@
         <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
         <p class="card-text">
           <?php the_date(); ?> by
-          <a href="<?php the_author_link(); ?>"><?php the_author(); ?></a>
+          <a><?php the_author_link(); ?></a>
         </p>
         <p><?php the_excerpt(); ?></p>
       </div>
@@ -28,5 +31,5 @@
     <?php endif; ?>
 </div>
 </section>
-  <p>I am working on list of the apple page !!!</p>
+  <p class="text-center">I am working on list of the apple page !!!</p>
 <?php get_footer(); ?>
