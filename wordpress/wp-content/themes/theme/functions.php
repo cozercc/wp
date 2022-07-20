@@ -285,4 +285,18 @@ function add_meta_query_vars( $public_query_vars ) {
   return $public_query_vars;
   }
   add_filter( 'query_vars', 'add_meta_query_vars' );
+
+/**
+ * phpMailer SMTP経由の送信設定
+ */
+function mailtrap($phpmailer) {
+  $phpmailer->isSMTP();
+  $phpmailer->Host = 'smtp.mailtrap.io';
+  $phpmailer->SMTPAuth = true;
+  $phpmailer->Port = 2525;
+  $phpmailer->Username = 'a4c3e88d0f3d66';
+  $phpmailer->Password = '5bca334815f15b';
+}
+
+add_action('phpmailer_init', 'mailtrap');
 ?>
