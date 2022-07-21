@@ -44,7 +44,7 @@
         </div>
       </nav>
       <div class="mx-auto">
-        <?php echo do_shortcode( '[searchandfilter fields="search,appleproduct" post_types="apple" order_dir=",asc,desc" order_by=",price"]' ); ?>
+        <?php echo do_shortcode( '[searchandfilter fields="search,appleproduct,category,post_tag" post_types="apple" order_dir=",asc,desc" order_by=",price"]' ); ?>
       </div>
     </header>
     
